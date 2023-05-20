@@ -1,6 +1,3 @@
-[submodule "uploader_wasm/Skeleton"]
-	path = uploader_wasm/Skeleton
-	url = https://github.com/dhg/Skeleton
 [submodule "locadrive_wasm/Skeleton"]
 	path = locadrive_wasm/Skeleton
 	url = https://github.com/dhg/Skeleton

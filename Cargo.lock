@@ -1844,7 +1844,7 @@ checksum = "ef53942eb7bf7ff43a617b3e2c1c4a5ecf5944a7c1bc12d7ee39bbb15e5c1519"
 
 [[package]]
 name = "locadrive"
-version = "0.1.0"
+version = "1.0.0"
 dependencies = [
  "async-compression 0.4.0",
  "atomic_float",
@@ -3657,7 +3657,7 @@ checksum = "f962df74c8c05a667b5ee8bcf162993134c104e96440b663c8daa176dc772d8c"
 
 [[package]]
 name = "uploader_wasm"
-version = "0.1.0"
+version = "1.0.0"
 dependencies = [
  "async-compression 0.4.0",
  "base64 0.21.0",

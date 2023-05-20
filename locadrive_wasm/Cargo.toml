@@ -1,6 +1,6 @@
 [package]
 name = "uploader_wasm"
-version = "0.1.0"
+version = "1.0.0"
 edition = "2021"
 
 
@@ -25,8 +25,3 @@ wasm-bindgen-futures = "0.4.36"
 [dependencies.web-sys]
 version = "0.3.63"
 features = ["Window", "Event", "HtmlInputElement", "FileList", "BinaryType", "Blob", "MessageEvent", "ProgressEvent", "WebSocket", "Location", "Document", "CloseEvent", "HtmlSelectElement", "File", "ReadableStream", "Request", "RequestInit", "RequestMode", "Response", "Headers", "WritableStream", "console"]
-
-[profile.release]
-codegen-units = 1
-lto = true
-strip = true

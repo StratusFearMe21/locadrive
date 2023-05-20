@@ -1,6 +1,6 @@
 [package]
 name = "locadrive"
-version = "0.1.0"
+version = "1.0.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
@@ -24,10 +24,3 @@ tokio-util = { version = "0.7.8", features = ["io"] }
 tower = { version = "0.4.13", default-features = false }
 tower-http = { version = "0.4.0", features = ["fs", "compression-gzip", "compression-zstd"] }
 ureq = { version = "2.6.2", default-features = false }
-
-[profile.release]
-lto = true
-panic = "abort"
-codegen-units = 1
-strip = true
-

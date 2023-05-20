@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf8">
+  <title>LocaDrive</title>
+  <meta name="description" content="An easy to use and very fast file transfer program">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link data-trunk rel="rust" data-wasm-opt="3" />
+  <link data-trunk rel="css" href="Skeleton/css/normalize.css">
+  <link data-trunk rel="css" href="Skeleton/css/skeleton.css">
+</head>
+
+<body>
+  <div id="container" class="container">
+    <div>
+      <input type="number" name="num_files" id="num_files" style="visibility: hidden;" />
+      <div>
+        <label for="file_input">Upload File:</label>
+        <input class="u-full-width button" type="file" name="file_input" id="file_input" style="height: 16rem;"
+          multiple />
+        <select class="u-full-width" id="exist_dir_select"></select>
+        <div class="row">
+          <input class="nine columns" placeholder="Type the folder to create and hit the Create Folder button"
+            type="text" name="new_directory" id="new_directory" />
+          <a class="three columns button" id="new_dir_button">Create Folder</a>
+        </div>
+        <div>
+          <input id="submit_button" class="u-full-width button-primary" type="submit" value="Begin Upload" />
+        </div>
+      </div>
+    </div>
+    <h4 id="upload_complete_header" style="visibility: hidden;text-align: center;">Upload Successful!</h4>
+    <div style="visibility: hidden;" id="complete_transfer_buttons">
+      <a class="four columns button button-primary" target="_blank" id="transfer_as_tar">Complete transfer</a>
+      <a class="four columns button button-primary" target="_blank" id="transfer_as_tzst">Transfer as tar.zst</a>
+      <a class="four columns button button-primary" target="_blank" id="transfer_as_tgz">Transfer as tar.gz</a>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+[package]
+name = "locadrive"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+async-compression = { version = "0.4.0", features = ["gzip", "tokio", "zstd"] }
+atomic_float = { version = "0.1.0", default-features = false }
+axum = { version = "0.6.18", features = ["multipart", "headers", "ws"] }
+dirs = "5.0.1"
+iced = { git = "https://github.com/iced-rs/iced", features = ["tokio"] }
+local-ip-address = "0.5.3"
+panicui = "0.1.0"
+pin-project = "1.1.0"
+postcard = { version = "1.0.4", features = ["use-std"] }
+rfd = "0.11.3"
+serde = { version = "1.0.163", features = ["derive"] }
+slab = "0.4.8"
+tokio = { version = "1.28.1", features = ["rt-multi-thread", "io-util", "fs", "sync", "macros"] }
+tokio-tar = "0.3.0"
+tokio-util = { version = "0.7.8", features = ["io"] }
+tower = { version = "0.4.13", default-features = false }
+tower-http = { version = "0.4.0", features = ["fs", "compression-gzip", "compression-zstd"] }
+ureq = { version = "2.6.2", default-features = false }
+
+[profile.release]
+lto = true
+panic = "abort"
+codegen-units = 1
+strip = true
+

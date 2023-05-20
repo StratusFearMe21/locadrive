@@ -1,0 +1,32 @@
+[package]
+name = "uploader_wasm"
+version = "0.1.0"
+edition = "2021"
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+async-compression = { version = "0.4.0", features = ["zstd", "futures-io"] }
+base64 = "0.21.0"
+console_error_panic_hook = "0.1.7"
+deunicode = "1.3.3"
+futures-util = { version = "0.3.28", default-features = false, features = ["std", "io"] }
+js-sys = "0.3.63"
+memchr = "2.5.0"
+pin-project = "1.1.0"
+postcard = { version = "1.0.4", features = ["use-std"] }
+serde = { version = "1.0.163", features = ["derive"] }
+sledgehammer_bindgen = "0.2.2"
+sledgehammer_utils = "0.1.1"
+wasm-bindgen = "0.2.86"
+wasm-bindgen-futures = "0.4.36"
+
+[dependencies.web-sys]
+version = "0.3.63"
+features = ["Window", "Event", "HtmlInputElement", "FileList", "BinaryType", "Blob", "MessageEvent", "ProgressEvent", "WebSocket", "Location", "Document", "CloseEvent", "HtmlSelectElement", "File", "ReadableStream", "Request", "RequestInit", "RequestMode", "Response", "Headers", "WritableStream", "console"]
+
+[profile.release]
+codegen-units = 1
+lto = true
+strip = true

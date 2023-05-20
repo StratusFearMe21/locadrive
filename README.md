@@ -15,17 +15,21 @@ used to upload files directly to your computer, or the other way around!
 - Transfer multiple files to the WASM side by compressing them into a `.tar` file
 
 ## Installation
-1. Compile `locadrive_wasm` using `trunk`
+1. Make sure to clone this repo with submodules
+```shell
+git clone --recursive https://github.com/StratusFearMe21/locadrive.git
+```
+2. Compile `locadrive_wasm` using `trunk`
 ```shell
 cd locadrive_wasm
 trunk build --release
 ```
-2. Compile `locadrive_iced` using `cargo`
+3. Compile `locadrive_iced` using `cargo`
 ```shell
 cd locadrive_iced
 cargo build --release
 ```
-3. Make sure that the `dist` folder in `locadrive_wasm` is in your working directory, and launch the program!
+4. Make sure that the `dist` folder in `locadrive_wasm` is in your working directory, and launch the program!
 
 ## Usage
 Launch `locadrive_iced` with the `locadrive_wasm` `dist` folder in your working directory, then follow the instructions in the GUI.
